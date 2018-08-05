@@ -3,5 +3,7 @@
 }
 .Main {
   display: flex;
-  
+  align-content: center;
+  justify-content: space-around;
+  background-color: #319E84;
 }

@@ -1,11 +1,16 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 
+const ctrl= require('./controller')
+
 
 const app = express();
 app.use( bodyParser.json() );
 
-//app.get()
+app.get('/api/books', ctrl.getBooks)
+
+
+app.post('/api/books', ctrl.addBook)
 
 
 

@@ -4,6 +4,7 @@ import './App.css';
 import Book from './Components/Book';
 import Top10 from './Components/Top10';
 import Favorites from './Components/Favorites';
+import Header from './Components/Header';
 
 class App extends Component {
   constructor(){
@@ -36,18 +37,18 @@ class App extends Component {
     //   return <Book key={book.isbn} oneBook={book}/> 
     // })
     return (
-      <div className="App">
-      <h1>Search your favorite books!</h1>
-        <input onChange={e => this.handleChange(e.target.value)}type="text"/>
+      <div className="App" >
+      <Header />
+        <input onChange={e => this.handleChange(e.target.value)}type="text" placeholder='ex. Oliver Twist'/>
         <button onClick={() => this.handleClick()} >Search</button>
         <div className="Main">
         {/* {mappedBooks} */}
         <Book arrBook={this.state.arrBook} />
-            <Top10 />
+            <Top10 className="Top10"/>
           <div>
          
           </div>
-          <Favorites />
+          <Favorites className='Favorites'/>
         </div>
       </div>
     );
